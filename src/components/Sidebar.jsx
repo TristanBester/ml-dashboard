@@ -18,19 +18,19 @@ export default function Sidebar() {
                 <ul className="SidebarList">
                     <li className="SidebarListItem">
                         <AssessmentOutlinedIcon className="SidebarIcon" />
-                        Dashboard
+                        <span className='SidebarText'>Dashboard</span>
                     </li>
                     <li className="SidebarListItem">
                         <HomeIcon className="SidebarIcon" />
-                        Home
+                        <span className='SidebarText'>Home</span>
                     </li>
                     <li className="SidebarListItem">
                         <TimelineIcon className="SidebarIcon" />
-                        Analytics
+                        <span className='SidebarText'>Analytics</span>
                     </li>
                     <li className="SidebarListItem">
                         <BlurOnOutlinedIcon className="SidebarIcon" />
-                        Statistics
+                        <span className='SidebarText'>Statistics</span>
                     </li>
                 </ul>
             </div>

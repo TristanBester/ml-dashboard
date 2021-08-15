@@ -44,24 +44,30 @@
 }
 
 .SidebarList {
-    list-style: none;
     padding: 0px;
 }
 
 .SidebarListItem {
-    padding: 5px;
+    padding: 20px;
     cursor: pointer;
     display: flex;
     align-items: center;
     border-radius: 10px;
-  }
-  
+    font-size: 15px;
+}
+
 .SidebarListItem.active,
 .SidebarListItem:hover {
-    background-color: rgb(236, 236, 252);
+    color: rgb(236, 236, 252);
+}
+
+.SidebarText{
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .SidebarIcon {
-    margin-right: 10px;
-    font-style: 10px !important;
+    margin-right: 15px;
+    margin-left: 30px;
+    font-size: 25px !important;
 }

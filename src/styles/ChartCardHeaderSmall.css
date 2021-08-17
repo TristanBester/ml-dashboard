@@ -1,0 +1,49 @@
+
+.ChartHeaderContainerSmall{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;  
+}
+
+.HeaderContainerSmall{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 50px;
+}
+
+.ChartNameLabelSmall{
+    color: grey;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.ChartTypeLabelSmall{
+    color:rgb(197, 197, 197);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.ChartTypeNavigatorSmall{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ChartButtonSmall{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #dd53ca;
+    opacity: 0.7;
+    color: white;
+    margin-right: 15px;
+}
+
+.ChartButtonSmall.active,
+.ChartButtonSmall:hover{
+    background-color: #b661e9;
+    font-weight: 800;
+}

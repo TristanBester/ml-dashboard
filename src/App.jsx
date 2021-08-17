@@ -14,7 +14,14 @@ function App() {
         <div className="SidebarContainer">
           <Sidebar />
         </div>
-        <Home />
+        <Switch>
+          <Route exact path='/dashboard'>
+            <Home />
+          </Route>
+          <Route path='/other'>
+            <div>Other page</div>
+          </Route>
+        </Switch>
       </div>
     </Router>
   );

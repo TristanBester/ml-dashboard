@@ -1,0 +1,90 @@
+.AreaChartHeaderContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.HeaderContainerLarge{
+    display: flex;
+    flex-direction: column;
+}
+
+.ChartNameLabelLarge{
+    color: grey;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.ChartTypeLabelLarge{
+    color:rgb(197, 197, 197);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.LeftChartButtonLarge{
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border: none;
+    padding: 5px 20px;
+    background-color:#dd53ca;
+    opacity: 0.8;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.LeftChartButtonLarge.active,
+.LeftChartButtonLarge:hover{
+    background-color: #b661e9;
+    font-weight: 800;
+}
+
+.MiddleChartButtonLarge{
+    border-color: grey;
+    padding: 5px 20px;
+    border: none;
+    background-color:#dd53ca;
+    opacity: 0.8;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    border-left: none;
+    border-right: none;
+}
+
+.MiddleChartButtonLarge.active,
+.MiddleChartButtonLarge:hover{
+    background-color: #b661e9;
+    font-weight: 800;
+}
+
+.RightChartButtonLarge{
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border: none;
+    padding: 5px 20px;
+    background-color:#dd53ca;
+    color: white;
+    opacity: 0.8;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.RightChartButtonLarge.active,
+.RightChartButtonLarge:hover{
+    background-color: #b661e9;
+    font-weight: 800;
+}
+
+.ToolTip{
+    border-radius: 0.25rem;
+    background-color: #1e202f;
+    color: white;
+    padding: 1rem;
+    box-shadow: 15px 15px 20px 5px rgba(0,0,0,0.5);
+    text-align: center;
+}

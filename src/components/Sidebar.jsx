@@ -3,6 +3,7 @@ import AssessmentOutlinedIcon from '@material-ui/icons/AssessmentOutlined';
 import HomeIcon from '@material-ui/icons/Home';
 import TimelineIcon from '@material-ui/icons/Timeline';
 import BlurOnOutlinedIcon from '@material-ui/icons/BlurOnOutlined';
+import { NavLink } from 'react-router-dom';
 
 export default function Sidebar() {
     return (
@@ -17,12 +18,16 @@ export default function Sidebar() {
             <div className="ContainerBottom">
                 <ul className="SidebarList">
                     <li className="SidebarListItem">
-                        <AssessmentOutlinedIcon className="SidebarIcon" />
-                        <span className='SidebarText'>Dashboard</span>
+                        <NavLink to="/dashboard" activeClassName="ActiveOne" style={{ textDecoration: 'none' }}>
+                            <AssessmentOutlinedIcon className="SidebarIcon" />
+                            <span className='SidebarText'>Dashboard</span>
+                        </NavLink>
                     </li>
                     <li className="SidebarListItem">
-                        <HomeIcon className="SidebarIcon" />
-                        <span className='SidebarText'>Home</span>
+                        <NavLink to="/other" activeClassName="ActiveOne" style={{ textDecoration: 'none' }}>
+                            <HomeIcon className="SidebarIcon" />
+                            <span className='SidebarText'>Home</span>
+                        </NavLink>
                     </li>
                     <li className="SidebarListItem">
                         <TimelineIcon className="SidebarIcon" />

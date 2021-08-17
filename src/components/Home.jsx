@@ -1,86 +1,48 @@
 import '../styles/Home.css'
-import { XAxis, YAxis, CartesianGrid, Tooltip, AreaChart, Area, ResponsiveContainer } from 'recharts';
-import { format, parseISO } from 'date-fns';
-
-import data from '../data.js'
+import { data, data01, data02 } from '../data.js'
+import AreaChartCardLarge from './AreaChartCardLarge';
+import LineChartCardSmall from './LineChartCardSmall';
+import BarChartCardSmall from './BarChartCardSmall';
+import ScatterCardSmall from './ScatterCardSmall';
 
 export default function Home() {
     return (
         <div className='Home'>
             <div className="MainChartContainer">
-                <div className="MainChartHeaderContainer">
-                    <div className="HeaderContainer">
-                        <label className='ChartNameLabel'>Main Chart</label>
-                        <label className='ChartTypeLabel'>Revenue</label>
-                    </div>
-                    <div className="ChartTypeNavigator">
-                        <button className="LeftChartButton">Left</button>
-                        <button className="MiddleChartButton">Middle</button>
-                        <button className="RightChartButton">Right</button>
-                    </div>
+                <AreaChartCardLarge
+                    heading="Performance"
+                    label="Turn over"
+                    leftName="Total"
+                    middleName="Churn"
+                    rightName="Drift"
+                    navigator={true}
+                    data={data} />
+            </div>
+            <div className="BottomChartsContainer">
+                <div className="LeftChart">
+                    <BarChartCardSmall
+                        heading="Proportions"
+                        label="Tiers"
+                        data={data} />
                 </div>
-
-                <ResponsiveContainer width='100%' height={300}>
-                    <AreaChart data={data} margin={{
-                        top: 5,
-                        right: 45,
-                        left: 40,
-                        bottom: 5,
-                    }}>
-                        <defs>
-                            <linearGradient id="color" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0%" stopColor="#dd53ca" stopOpacity={0.7} />
-                                <stop offset="75%" stopColor="#b661e9" stopOpacity={0.1} />
-                            </linearGradient>
-                        </defs>
-
-                        <Area dataKey="uv" stroke="#dd53ca" fill="url(#color)" />
-
-                        <XAxis dataKey="name"
-                            axisLine={false}
-                            tickLine={false}
-                            tickFormatter={(str) => {
-                                const date = parseISO(str)
-
-                                //Check if day is multiple of 7.
-                                if (date.getDate() % 7 === 0) {
-                                    return format(date, "MMM, d")
-                                }
-                                return "";
-                            }}
-                        />
-
-                        <YAxis
-                            dataKey="uv"
-                            axisLine={false}
-                            tickLine={false}
-                            tickCount={8}
-                            tickFormatter={(number) => `$${number.toFixed(2)}`}
-                        />
-
-                        <Tooltip content={<CustomToolTip />} />
-
-                        <CartesianGrid opacity="0.1" vertical={false} />
-                    </AreaChart>
-                </ResponsiveContainer>
-
+                <div className="MiddleChart">
+                    <ScatterCardSmall
+                        heading="Samples"
+                        label="Data"
+                        dataOne={data01}
+                        dataTwo={data02} />
+                </div>
+                <div className="RightChart">
+                    <LineChartCardSmall
+                        name="Statistics"
+                        label="Distribution"
+                        leftName="KS"
+                        middleName="JS"
+                        rightName="XX"
+                        navigator={true}
+                        data={data} />
+                </div>
             </div>
         </div>
     )
-}
-
-function CustomToolTip({ active, payload, label }) {
-    if (active) {
-        return (
-            <div className='ToolTip'>
-                <h4>
-                    {format(parseISO(label), "eeee, d MMM, yyyy")}
-                </h4>
-                <p>
-                    ${payload[0].value.toFixed(2)} CAD
-                </p>
-            </div>
-        )
-    }
-    return null;
 }

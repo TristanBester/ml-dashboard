@@ -3,6 +3,7 @@ import Home from './components/Home';
 import Sidebar from './components/Sidebar';
 import Topbar from './components/Topbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Dashboard from './components/Dashboard';
 
 
 
@@ -15,11 +16,11 @@ function App() {
           <Sidebar />
         </div>
         <Switch>
-          <Route exact path='/dashboard'>
+          <Route exact path='/home'>
             <Home />
           </Route>
-          <Route path='/other'>
-            <div>Other page</div>
+          <Route path='/dashboard'>
+            <Dashboard />
           </Route>
         </Switch>
       </div>

@@ -24,7 +24,7 @@ export default function Sidebar() {
                         </NavLink>
                     </li>
                     <li className="SidebarListItem">
-                        <NavLink to="/other" activeClassName="ActiveOne" style={{ textDecoration: 'none' }}>
+                        <NavLink to="/home" activeClassName="ActiveOne" style={{ textDecoration: 'none' }}>
                             <HomeIcon className="SidebarIcon" />
                             <span className='SidebarText'>Home</span>
                         </NavLink>

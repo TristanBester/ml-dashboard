@@ -100,3 +100,12 @@
     color: rgb(197, 197, 197);
     margin-left: 5%;
 }
+
+.DashboardMiddleContainer{
+    height: 40vh;
+    width: 45vw;
+    -webkit-box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 50px -5px rgba(0, 0, 0, 1);
+    padding: 1%;
+    margin: 3% 1%;
+}

@@ -3,8 +3,8 @@ import MultilineChartIcon from '@material-ui/icons/MultilineChart';
 import BubbleChartIcon from '@material-ui/icons/BubbleChart';
 import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import { XAxis, YAxis, CartesianGrid, BarChart, Bar, ResponsiveContainer } from 'recharts';
-import { data, data01, data02 } from '../data.js'
-
+import { data, data0, data01, data02 } from '../data.js'
+import DashboardGraph from './DashboardGraph';
 
 export default function Dashboard() {
     return (
@@ -64,6 +64,11 @@ export default function Dashboard() {
                         <h1>51.96</h1>
                     </div>
                 </div>
+            </div>
+            <div className="DashboardMiddleContainer">
+                <DashboardGraph 
+                    dataOne={data}
+                    dataTwo={data0}/>
             </div>
         </div>
     )

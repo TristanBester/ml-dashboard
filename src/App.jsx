@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import Topbar from './components/Topbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Dashboard from './components/Dashboard';
+import FeatureExpansion from './components/FeatureExpansion';
 
 
 
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path='/dashboard'>
             <Dashboard />
+          </Route>
+          <Route path="/feature/:featureId">
+            <FeatureExpansion/>
           </Route>
         </Switch>
       </div>

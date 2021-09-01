@@ -5,6 +5,7 @@ import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import { XAxis, YAxis, CartesianGrid, BarChart, Bar, ResponsiveContainer } from 'recharts';
 import { data, data0, data01, data02 } from '../data.js'
 import DashboardGraph from './DashboardGraph';
+import DashboardTable from './DashboardTable';
 
 export default function Dashboard() {
     return (
@@ -65,11 +66,40 @@ export default function Dashboard() {
                     </div>
                 </div>
             </div>
-            <div className="DashboardMiddleContainer">
-                <DashboardGraph 
-                    dataOne={data}
-                    dataTwo={data0}/>
+            <div className="DashboardBottomContainer">
+                <div className="DashboardBottomLeft">
+                    <div className="DashboardGraphContainer">
+                        <DashboardGraph 
+                            dataOne={data}
+                            dataTwo={data0}/>
+                        <div className="DashboardBottomBar">
+                            <div className="DashboardBottomBarItem">
+                                <img src="https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/oriental-lily.jpg?itok=8QILjH76"
+                                    alt="nice" 
+                                    className="DashboardImg" />
+                                <div className="DashboardBottomBarLabelContainer">
+                                    <h3>Profile one</h3>
+                                    <h4>Last access one week ago...</h4>
+                                </div>
+                            </div>
+                            <div className="DashboardBottomBarItem">
+                                <img src="https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/oriental-lily.jpg?itok=8QILjH76"
+                                    alt="nice" 
+                                    className="DashboardImg" />
+                                <div className="DashboardBottomBarLabelContainer">
+                                    <h3>Profile one</h3>
+                                    <h4>Last access one week ago...</h4>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div className="DashboardBottomRight">
+                    <DashboardTable/>
+                </div>
             </div>
+            
         </div>
     )
 }

@@ -156,5 +156,56 @@ const data02 = [
     }
 ];
 
+const tableData = [
+    {
+        id: 1,
+        feature: "Feature one",
+        KS: 12.11,
+        JS: 13.96
+    },
+    {
+        id: 2,
+        feature: "Feature two",
+        KS: 13.78,
+        JS: 22.21
+    },
+    {
+        id: 3,
+        feature: "Feature three",
+        KS: 7.91,
+        JS: 3.90
+    },
+    {
+        id: 4,
+        feature: "Feature four",
+        KS: 10.76,
+        JS: 9.94
+    },
+    {
+        id: 5,
+        feature: "Feature five",
+        KS: 18.15,
+        JS: 5.76
+    },
+    {
+        id: 6,
+        feature: "Feature six",
+        KS: 6.54,
+        JS: 5.99
+    },
+    {
+        id: 7,
+        feature: "Feature seven",
+        KS: 8.62,
+        JS: 11.58
+    },
+    {
+        id: 8,
+        feature: "Feature eight",
+        KS: 2.42,
+        JS: 7.31
+    }
+]
 
-export { data, data0, data01, data02 };
+
+export { data, data0, data01, data02, tableData };
